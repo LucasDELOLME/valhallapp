@@ -13,13 +13,19 @@ namespace valhallappweb.Commands
         public async Task NullParams()
         {
             DisplayCommandLine("wrestler 0", Context.Message.Author.Username, Context.Channel.Name);
-            await ReplyAsync($"Error: at least one user should be provided!\nExemple: {}");
+            await ReplyAsync($"Error: at least one user should be provided!\nExemple: {prefix}wrestler <@779648566057762826>");
         }
         [Command("wrestler")]
-        public async Task NullParams()
+        public async Task OneParams([Remainder] string param)
         {
             DisplayCommandLine("fine", Context.Message.Author.Username, Context.Channel.Name);
-            await ReplyAsync("I guess you're my little PogChamp.\nCome here~");
+            await ReplyAsync($"{param}");
+        }
+        [Command("wrestler")]
+        public async Task OneParams([Remainder] string param, [Remainder] string param2)
+        {
+            DisplayCommandLine("fine", Context.Message.Author.Username, Context.Channel.Name);
+            await ReplyAsync($"{param} {param2}");
         }
     }
 }

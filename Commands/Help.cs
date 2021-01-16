@@ -14,7 +14,6 @@ namespace Valhallapp.Modules
         {
             DisplayCommandLine("help", Context.Message.Author.Username, Context.Channel.Name);
             var embed = new EmbedBuilder();
-            string prefix = "&";
             embed.WithTitle("Commands list:")
                 .WithAuthor(Context.Client.CurrentUser)
                 .AddField($"{prefix}femboy", "Display the seeded femboy percentage rating of the a user. Can accept one paramater.")

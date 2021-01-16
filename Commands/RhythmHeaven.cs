@@ -6,7 +6,7 @@ using static valhallappweb.PublicFunction;
 
 namespace Valhallapp.Modules
 {
-    public class RythmHeaven : ModuleBase<SocketCommandContext>
+    public class RhythmHeaven : ModuleBase<SocketCommandContext>
     {
         [Command("fine")]
         public async Task Fine()
@@ -31,12 +31,6 @@ namespace Valhallapp.Modules
         {
             DisplayCommandLine("Wubbadubadub", Context.Message.Author.Username, Context.Channel.Name);
             await ReplyAsync("Yes.");
-        }
-        [Command("dikidikidikidesu ka?")]
-        public async Task Dikidikidesu()
-        {
-            DisplayCommandLine("dikidikidikidesu ka?", Context.Message.Author.Username, Context.Channel.Name);
-            await ReplyAsync("え。");
         }
     }
 }

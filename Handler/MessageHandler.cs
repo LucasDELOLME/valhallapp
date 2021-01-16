@@ -39,6 +39,7 @@ namespace valhallappweb
             await CheckImageArtChannelAsync(message);
             // command prompt
             int argPos = 0;
+            Console.WriteLine("prefix is: "+prefix);
             if (message.HasStringPrefix("&", ref argPos))
             {
                 var result = await _commands.ExecuteAsync(context, argPos, _services);
